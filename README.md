@@ -302,8 +302,11 @@ originate? How is it centralized? What constraints ensure correctness? Can it to
 failures? These fundamental questions apply everywhere, from voting systems to social 
 media to financial transactions.
 
-### [Member 3 Name]
-[Your reflection]
+### iovxns - Anne Daniel Reflection
+
+What surprised me most about using a managed database was how many things Supabase already handled automatically. I expected that building a distributed voting system would require many separate services and complicated backend setup, but Supabase already provided the database, REST API, and real-time updates in one platform. It was also different from what I expected because I thought it would only work as a simple cloud database, but it actually supported distributed system features very well. The database constraints also handled duplicate votes automatically, which made the system more reliable and reduced the need for extra application logic.
+
+Compared to microservices, Supabase was much easier to use because we did not need to create separate APIs, workers, or message queues. This made development faster and testing simpler, especially for a small project like this. However, microservices may still be better for larger systems because they give more flexibility and customization. If this system needed to scale to 1 million votes, we would need stronger servers, better database indexing, caching, and load balancing to handle many users at the same time. Even though Supabase can scale well, large production systems would probably require more advanced distributed system architecture to maintain performance and reliability.
 
 ---
 
