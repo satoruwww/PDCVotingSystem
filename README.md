@@ -1,6 +1,6 @@
 # Distributed Voting System with Supabase
 
-**Group Members:** [Labial Jay Mark S. , JIM FRANCIS C. MARGAJA , Reahlyn Ermita ]  
+**Group Members:** [Labial Jay Mark S. , JIM FRANCIS C. MARGAJA , Reahlyn Ermita, Anne Daniel, Carmichael Damalan ]  
 **Supabase Project URL:** https://app.supabase.com/project/xxxxx  
 
 ---
