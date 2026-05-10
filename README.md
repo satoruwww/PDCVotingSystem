@@ -1,6 +1,6 @@
 # Distributed Voting System with Supabase
 
-**Group Members:** [Labial Jay Mark S. , ]  
+**Group Members:** [Labial Jay Mark S. , JIM FRANCIS C. MARGAJA ]  
 **Supabase Project URL:** https://app.supabase.com/project/xxxxx  
 
 ---
@@ -270,8 +270,37 @@ and understand distributed systems at any scale.
 System behavior during normal operation When the system was running, I could see in the terminal that votes were being accepted by the API, with POST /vote HTTP/1.1 200 OK appearing each time a vote came through. The mock insert logs also confirmed that the API was correctly receiving and passing the vote payloads down the pipeline. Seeing the data move in real time made it easier to understand how each component connects to the next. Tracking votes by device taught me the power of simple design  patterns in distributed systems. By adding a "device_name" column and  including it with every vote, we could instantly see which device sent which vote.
 
 What surprised me was how the database constraint prevented duplicates automatically. When we sent duplicate votes, the UNIQUE constraint handled it. I expected application logic, but the database was smarter Looking back, the biggest lesson was understanding fundamental principles over  specific technologies. Whether it's Supabase or GCP, REST APIs or message queues,  the core pattern stays the same: collect data at the edge, centralize it, apply  constraints, and make it queryable.
-### [Member 2 Name]
-[Your reflection]
+
+
+### [Rea800 - Reahlyn Ermita R  REFLECTION]
+
+Working on the distributed voting system taught me that understanding the "why" 
+behind architecture decisions is just as important as understanding the "what." 
+Initially, I thought Supabase was a simpler version of what "real" systems use, 
+but I now understand it's just a different trade-off. Supabase prioritizes simplicity 
+and speed; GCP prioritizes flexibility and control. Neither is better — they're 
+suited to different problems.
+
+The performance metrics we collected showed something unexpected: the system was 
+incredibly stable. With an average latency of 47.53ms and zero data loss, the system 
+was far more reliable than I expected for something we built from scratch. I thought 
+there would be edge cases we missed, dropped votes, or race conditions. But the 
+combination of idempotent writes, good database design, and the managed Supabase 
+infrastructure handled everything correctly. This reinforced that good system design 
+is about eliminating surprises, not about raw complexity.
+
+The multi-device testing phase was particularly enlightening. Seeing votes from three 
+different sources mix together in a single database, each properly identified by 
+edge_id, showed me how distributed systems aggregate data. The fact that we could 
+instantly query "how many votes did Device-1 send?" without any special logic just 
+because we designed the data correctly. This is what I'll remember: good design makes 
+complex queries simple.
+
+This lab prepared me not just to build systems, but to evaluate them. When I encounter 
+a new system (whether in a job, a class, or open source), I now ask: Where does data 
+originate? How is it centralized? What constraints ensure correctness? Can it tolerate 
+failures? These fundamental questions apply everywhere, from voting systems to social 
+media to financial transactions.
 
 ### [Member 3 Name]
 [Your reflection]
