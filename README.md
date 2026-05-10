@@ -1,4 +1,4 @@
-<img width="677" height="548" alt="image" src="https://github.com/user-attachments/assets/07d42dae-7cfc-4e6a-85d4-49502f412066" /># Distributed Voting System with Supabase
+# Distributed Voting System with Supabase
 
 **Group Members:** [Labial Jay Mark S. , JIM FRANCIS C. MARGAJA , Reahlyn Ermita, Anne Daniel, Carmichael Damalan ]  
 **Supabase Project URL:** https://app.supabase.com/project/xxxxx  
