@@ -272,7 +272,7 @@ System behavior during normal operation When the system was running, I could see
 What surprised me was how the database constraint prevented duplicates automatically. When we sent duplicate votes, the UNIQUE constraint handled it. I expected application logic, but the database was smarter Looking back, the biggest lesson was understanding fundamental principles over  specific technologies. Whether it's Supabase or GCP, REST APIs or message queues,  the core pattern stays the same: collect data at the edge, centralize it, apply  constraints, and make it queryable.
 
 
-### [Rea800 - Reahlyn Ermita R  REFLECTION]
+### [Rea800 - Reahlyn Ermita REFLECTION]
 
 Working on the distributed voting system taught me that understanding the "why" 
 behind architecture decisions is just as important as understanding the "what." 
