@@ -55,7 +55,7 @@ class VotingClient:
                     print(f"✓ Vote #{self.vote_count} | {self.edge_id} | Choice: {vote['choice']}")
                     return True
                 else:
-                    print(f"⚠️  Attempt {attempt+1}: Status {response.status_code}")
+                    print(f"⚠️  Attempt {attempt+1}:  {response.status_code}")
                     if attempt < max_retries - 1:
                         time.sleep(2 ** attempt)
             except requests.exceptions.RequestException as e:
@@ -75,7 +75,7 @@ class VotingClient:
             while True:
                 vote = self.generate_vote()
                 self.send_vote(vote)
-                
+
                 # Random delay between votes (1-3 seconds)
                 delay = random.uniform(1, 3)
                 time.sleep(delay)
