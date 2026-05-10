@@ -1,4 +1,4 @@
-# Distributed Voting System with Supabase
+<img width="677" height="548" alt="image" src="https://github.com/user-attachments/assets/07d42dae-7cfc-4e6a-85d4-49502f412066" /># Distributed Voting System with Supabase
 
 **Group Members:** [Labial Jay Mark S. , JIM FRANCIS C. MARGAJA , Reahlyn Ermita, Anne Daniel, Carmichael Damalan ]  
 **Supabase Project URL:** https://app.supabase.com/project/xxxxx  
@@ -307,6 +307,18 @@ media to financial transactions.
 What surprised me most about using a managed database was how many things Supabase already handled automatically. I expected that building a distributed voting system would require many separate services and complicated backend setup, but Supabase already provided the database, REST API, and real-time updates in one platform. It was also different from what I expected because I thought it would only work as a simple cloud database, but it actually supported distributed system features very well. The database constraints also handled duplicate votes automatically, which made the system more reliable and reduced the need for extra application logic.
 
 Compared to microservices, Supabase was much easier to use because we did not need to create separate APIs, workers, or message queues. This made development faster and testing simpler, especially for a small project like this. However, microservices may still be better for larger systems because they give more flexibility and customization. If this system needed to scale to 1 million votes, we would need stronger servers, better database indexing, caching, and load balancing to handle many users at the same time. Even though Supabase can scale well, large production systems would probably require more advanced distributed system architecture to maintain performance and reliability.
+
+### kakar - Carmichael M. Damalan Reflection
+
+During the system run, I could see votes being processed properly in real time. The terminal logs showing POST /vote HTTP/1.1 200 OK confirmed that the API was receiving requests correctly, while the mock insert logs showed that the data was successfully passed into the database. This helped me understand how each part of the system works together from request to storage.
+
+Tracking votes per device was done in a very simple way by adding a “device_name” field in every request. With this, it was easy to identify which device sent each vote without needing complex logic. It made data tracing clear and organized.
+
+Another important observation was how the database handled duplicates automatically. The UNIQUE constraint blocked repeated votes without needing extra application code. This showed me that validation is more reliable when handled at the database level.
+
+The system also performed well overall, with an average latency of 47.53ms and no data loss during testing. Multiple devices were able to send votes at the same time without issues, and all data was stored correctly.
+
+In general, the activity showed that distributed systems rely more on proper structure than complex tools. Whether using Supabase or other platforms, the idea stays the same: collect data, store it centrally, enforce rules, and query it efficiently.
 
 ---
 
